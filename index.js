@@ -1,7 +1,7 @@
 /*
  * Author: LIULIZHI (liulizhiasd777@163.com)
  * File Created: 2021-11-24 11:47:12 pm
- * Last Modified: 2021-11-27 11:05:35 pm
+ * Last Modified: 2021-11-27 11:54:51 pm
  * Description: 使用selenium浏览器自动化
  */
 const fs = require("fs");
@@ -13,7 +13,13 @@ let opts = new chrome.Options();
   // const driver = new Builder().forBrowser("chrome").build();
   let driver = new Builder()
     .forBrowser("chrome")
-    .setChromeOptions(opts.headless())
+    .setChromeOptions(
+      opts.addArguments([
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--headless",
+      ])
+    )
     .build();
   try {
     await driver.get(
