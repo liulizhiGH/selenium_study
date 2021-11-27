@@ -1,15 +1,16 @@
 {
-  "name": "auto",
+  "name": "selenium_study",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "auto": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "selenium-webdriver": "^4.1.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
